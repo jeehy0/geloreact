@@ -52,25 +52,55 @@ function Menu() {
         our stone oven, all organic, all delicious.
       </p>
       <div className="pizzas">
-        <Pizza />
-        <Pizza />
-        <Pizza />
-        <Pizza />
-        <Pizza />
-        <Pizza />
+        <Pizza
+          name="Focaccia"
+          description="Bread with italian olive oil and rosemary"
+          img="./pizzas/focaccia.jpg"
+          qty="6"
+        />
+        <Pizza
+          name="Pizza Margherita"
+          description="Tomato and Mozarella"
+          img="./pizzas/margherita.jpg"
+          qty="10"
+        />
+        <Pizza
+          name="Pizza Spinaci"
+          description="Tomato, mozarella, spinach, and ricotta cheese"
+          img="./pizzas/spinaci.jpg"
+          qty="16"
+        />
+        <Pizza
+          name="Pizza Funghi"
+          description="Tomato, mozarella, mushrooms, and onion"
+          img="./pizzas/funghi.jpg"
+          qty="12"
+        />
+        <Pizza
+          name="Pizza Salamino"
+          description="Tomato, mozarella, and pepperoni"
+          img="./pizzas/salamino.jpg"
+          qty="15"
+        />
+        <Pizza
+          name="Pizza Prosciutto"
+          description="Tomato, mozarella, ham, aragula, and burrata cheese"
+          img="./pizzas/prosciutto.jpg"
+          qty="18"
+        />
       </div>
     </div>
   );
 }
 
-function Pizza() {
+function Pizza(props) {
   return (
     <div className="pizza">
-      <img src="./pizzas/focaccia.jpg"></img>
-      <div className="pizza">
-        <h3>Focaccia</h3>
-        <p>Bread with italian olive oil and rosemary.</p>
-        <span>6</span>
+      <img src={props.img} alt={props.name}></img>
+      <div>
+        <h3>{props.name}</h3>
+        <p>{props.description}</p>
+        <span>{props.qty}</span>
       </div>
     </div>
   );
