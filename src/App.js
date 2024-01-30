@@ -59,7 +59,7 @@ function Menu() {
           qty="6"
         />
         <Pizza
-          name="Pizza Margheritas"
+          name="Pizza Margherita"
           description="Tomato and Mozarella"
           img="./pizzas/margherita.jpg"
           qty="10"
